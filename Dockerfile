@@ -3,7 +3,7 @@
 #WORKDIR /CurrencyService
 #COPY . /CurrencyService
 #RUN mvn -f /CurrencyService/pom.xml clean install
-FROM openjdk:17-jdk-alpine
+FROM maven:3.6.0-jdk-11-slim AS build
 WORKDIR /CurrencyService
 COPY /target/servicesnew-0.0.1-SNAPSHOT.jar .
 RUN mvn clean install
