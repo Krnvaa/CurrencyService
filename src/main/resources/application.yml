@@ -5,9 +5,9 @@ spring:
   profiles:
     active: test
   datasource:
-    url: jdbc:postgresql://localhost:5432/summerprojectnew
+    url: jdbc:postgresql://containers-us-west-183.railway.app:7693/railway
     username: postgres
-    password: 090545
+    password: k699vwjFP7nMLfrX76Uh
     driver-class-name: org.postgresql.Driver
   cloud:
     openfeign:
