@@ -1,6 +1,9 @@
 
 #FROM maven:3.8.1-openjdk-19
-FROM maven:3.6.0-jdk-11-slim AS build
+FROM maven:latest-openjdk AS build
+# Дополнительные команды для сборки проекта
+FROM openjdk:latest-jre-slim
+# Конфигурация для запуска приложения
 WORKDIR /CurrencyService
 COPY . /CurrencyService
 RUN mvn -f /CurrencyService/pom.xml clean install
