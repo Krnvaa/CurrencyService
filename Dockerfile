@@ -6,5 +6,6 @@
 FROM openjdk:17-jdk-alpine
 WORKDIR /CurrencyService
 COPY target/servicesnew-0.0.1-SNAPSHOT.jar .
+RUN mvn clean install
 RUN mvn dependency:resolve
 CMD ["java", "-jar", "ваше-приложение.jar"]
