@@ -3,9 +3,9 @@
 #WORKDIR /CurrencyService
 #COPY . /CurrencyService
 #RUN mvn -f /CurrencyService/pom.xml clean install
-FROM openjdk:8-jdk-alpine
+FROM openjdk:17-jdk-alpine
 WORKDIR /CurrencyService
-COPY target/servicesnew-0.0.1-SNAPSHOT.jar .
+COPY /target/servicesnew-0.0.1-SNAPSHOT.jar .
 RUN mvn clean install
 RUN mvn dependency:resolve
 CMD ["java", "-jar", "ваше-приложение.jar"]
