@@ -1,5 +1,6 @@
 
-FROM maven:3.8.1-openjdk-19
+#FROM maven:3.8.1-openjdk-19
+FROM maven:3.6.0-jdk-17-slim AS build
 WORKDIR /CurrencyService
 COPY . /CurrencyService
 RUN mvn -f /CurrencyService/pom.xml clean install
